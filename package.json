@@ -1,0 +1,45 @@
+{
+  "name": "iptv-checker",
+  "version": "0.0.1",
+  "description": "IPTV Checker",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "nodemon src/index.ts",
+    "build": "tsc --project ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karoyqiu/iptv-checker.git"
+  },
+  "keywords": [
+    "IPTV"
+  ],
+  "author": "Roy QIU",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karoyqiu/iptv-checker/issues"
+  },
+  "homepage": "https://github.com/karoyqiu/iptv-checker#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "config": "^3.3.7",
+    "express": "^4.17.1",
+    "tmp-promise": "^3.0.3",
+    "winston": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/config": "0.0.41",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.8",
+    "@types/tmp": "^0.2.3",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.9.0",
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-plugin-import": "^2.25.4",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  }
+}
