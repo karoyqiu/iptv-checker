@@ -20,13 +20,14 @@ async function asyncFilter<T>(
 }
 
 const checkMedia = async (item: M3uMedia, index: number, all: M3uMedia[]) => {
+  w.verbose(`#${index}/${all.length}: Checking ${item.name ?? item.location}...`);
+
   try {
-    w.verbose(`#${index}/${all.length}: Checking ${item.name ?? item.location}...`);
     const { stdout } = await execFileAsync(
       'ffprobe',
       ['-loglevel', 'quiet', '-hide_banner', '-of', 'json', '-show_format',
-        '-timeout', '10000000',
         item.location],
+      { timeout: 10000 },
     );
 
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
